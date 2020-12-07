@@ -1,0 +1,193 @@
+:root {
+    --bluedark: #0a043c;
+    --blue: #03506f;
+    --grey: #bbbbbb;
+    --greydark: #bebebe;
+    --softpink: #ffe3d8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--greydark);
+}
+
+.wrapper {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+header {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    background: var(--bluedark);
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left .logo {
+    background-image: url(../icons/Logo-grey.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 65px;
+    height: 45px;
+}
+
+.header-left p {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--grey);
+    margin-left: 20px;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li a {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--grey);
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.menu ul li a:hover {
+    color: var(--softpink);
+    /* box-shadow: 0px 6px 12px -7px rgba(255,227,216,1); */
+
+}
+
+.header-left .logo:hover {
+    background-image: url(../icons/Logo-pink.svg);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 90vh;
+    max-height: 800px;
+    min-height: 650px;
+    min-width: 720px;
+}
+
+
+.card-container {
+    display: flex;
+    width: 35%;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70%;
+    max-height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    color: var(--bluedark);
+    font-size: 1.3rem;
+    
+}
+.card-container .card img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 300px;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.card-container .card h1,h3,h4 {
+    margin-bottom: 5px;
+    
+}
+.details-container{
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid var(--bluedark);
+    height: 70%;
+    border-radius: 20px;
+}
+
+.aboutMe{
+    padding: 10px 10px;
+}
+.skills {
+    padding-top: 10px;
+}
+.aboutMe, .skills {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    border-radius: 20px;
+    text-align: center;    
+    color: var(--bluedark);
+    
+}
+
+.details .aboutMe h2{
+    padding-bottom: 10px;  
+    font-size: 2rem;  
+    text-decoration: underline;  
+}
+
+.details .aboutMe p {
+    font-size: 1.8rem;
+    line-height: 18px;
+}
+
+.details .skills h2{
+    margin-bottom: 10px;
+    font-size: 2rem; 
+    text-decoration: underline;
+}
+
+.details .skills ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.details .skills ul li {
+    width: 25%;
+    line-height: 50px;
+    list-style: none;
+    font-size: 1.8rem;
+    color: var(--grey);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: var(--blue);
+}
