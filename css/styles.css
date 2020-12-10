@@ -28,13 +28,14 @@ body,button,select {
     margin: 0 auto;
     overflow: hidden;
     min-width: 720px;
+    background-color: #eeeeee;
 }
 
 
 header {
     display: flex;
     width: 100%;
-    height: 10vh;
+    height: 80px;
     background: var(--bluedark);
     align-items: center;
 }
@@ -43,6 +44,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--bluedark);
 }
 
 .header-left {
@@ -75,11 +77,14 @@ header {
     font-weight: 400;
     color: var(--grey);
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 10px;
+    padding: 10px;
 }
 
 .menu ul li a:hover {
-    color: var(--softpink);
+    color: var(--bluedark);
+    background: var(--grey);
+    
     /* box-shadow: 0px 6px 12px -7px rgba(255,227,216,1); */
 
 }
@@ -137,7 +142,7 @@ main {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    border: 1px solid var(--bluedark);
+    /* border: 1px solid var(--bluedark); */
     min-height: 400px;
     border-radius: 20px;
 }
@@ -178,23 +183,25 @@ main {
 
 .details .skills ul{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    
 }
 
 .details .skills ul li {
-    width: 25%;
-    line-height: 50px;
+    width: 26%;
+    line-height: 40px;
     list-style: none;
     font-size: 1.8rem;
     color: var(--grey);
     margin-bottom: 10px;
-    border-radius: 5px;
     background: var(--blue);
 }
 
 .projects-card-container {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 30px;
 }
 
 .projects-card{
@@ -203,9 +210,14 @@ main {
     margin-bottom: 20px;
     overflow: hidden;
     text-align: center;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     background: #eeeeee;
     box-shadow: 0px 13px 12px -8px rgba(0,0,0,.2);
+    transition-duration:.5s;
+}
+.projects-card:hover{
+    transform: scale(1.03);
+    transition-duration:1s ;
 }
 
 .projects-card img {
@@ -230,7 +242,7 @@ main {
     width: 70px;
     height: 30px;
     margin-bottom: 15px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     color: var(--bluedark);
     border: 1px solid var(--bluedark);
     background-color: white;
@@ -238,7 +250,11 @@ main {
     font-weight: 500;
     align-items: center;
     justify-content: center;
-       
+}
+.projects-card .button:hover{
+    color: var(--grey);
+    background: var(--blue);
+    cursor: pointer;
 }
 .projects > h2{
     text-align: center;
@@ -253,4 +269,137 @@ main {
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
+}
+
+.contac-container {
+    display: flex;
+}
+.contac-container .contac-form {
+    position: relative;
+    flex-grow: 3;
+    padding: 80px;
+    width: 250px;
+    min-height: 400px;
+    margin-bottom: 40px;
+    background-image: url(../images/contac-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contac-container .contac-form:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.8);
+}
+.contac-container .contac-form h2 {
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-size: 2.8rem;
+    line-height: 45px;
+    color: white;
+    border-left: 8px solid var(--blue);
+}
+.contac-container .contac-form p {
+    position: relative;
+    font-size: 1.8rem;
+    color: white;
+}
+.contac-container .contac-form div {
+    position: relative;
+    margin-top: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 150px;
+    outline: none;
+    background-color: var(--blue);
+    color: var(--grey);
+    
+}
+.contac-container .contac-form div p a {
+    text-decoration: none;
+    color: inherit;
+}
+.contac-container .contac-form div:hover {
+    width: 152px;
+    height: 41px;
+    cursor: pointer;
+}
+.contac-container .contac-form div:hover p a{
+    color: var(--greydark);
+    cursor: pointer;
+}
+
+.contac-container .contac-details {
+    flex-grow: 1;
+    width: 220px;
+    background: var(--blue);
+    margin-bottom: 40px;
+    padding: 85px 40px;
+    padding-right: 20px;
+}
+
+.contac-container .contac-details h2 {
+    font-size: 2.2rem;
+    color: var(--grey);
+    margin-bottom: 40px;
+}
+.contac-container .contac-details i {
+    font-size: 3rem;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.contac-container .contac-details p {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--grey);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: var(--blue);
+}
+
+footer .socialmedia {
+    position: relative;
+    display: flex;
+    background: inherit;
+    font-size: 5rem;
+    text-align: center;
+    line-height: 80px;
+    justify-content: space-evenly;
+    
+}
+
+footer .socialmedia a{
+    position: relative;
+}
+
+footer .socialmedia:before{
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.04);
+}
+
+footer .socialmedia i {
+    margin-right: 40px;
+    color: var(--greydark);
+}
+
+footer .socialmedia a:hover i{
+    color: var(--softpink);
 }
